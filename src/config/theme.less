@@ -1,0 +1,323 @@
+@import './base.less';
+@import './animate.css';
+@import './adapt.css';
+//@import '~iview/dist/styles/iview.css';
+//@import '~iview/src/styles/index.less';
+
+// 下面是要覆盖的变量，例如：@primary-color: @theme;
+@primary-color:@color;
+
+html,body,h1,h2,h3,h4,h5,h6,textarea,ul,li,span,p,input,ol,ul,a,img,dl,dt,dd{
+    padding: 0;
+    margin: 0;
+}
+//html{
+//    font-size: 14px;
+//    font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif !important;
+//}
+html,body{
+  font-size:14px;
+  font-family:Microsoft YaHei;
+}
+a,ul,li,ol{
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.clearfix:after{
+    display: block;
+    clear: both;
+    content: '';
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+
+
+/*
+.me(@width){
+  @xs : 100px/(1920px/@width);
+  @media (max-width:(@width + 2px)){
+    html{
+      font-size:@xs;
+    }
+  }
+}
+
+.me(1920px);
+.me(1440px);
+.me(1366px);
+.me(1280px);
+.me(1024px);
+.me(960px);
+.me(950px);
+.me(900px);
+.me(800px);
+.me(773px);
+.me(768px);
+.me(736px);
+.me(732px);
+.me(731px);
+.me(667px);
+.me(640px);
+.me(600px);
+.me(568px);
+.me(533px);
+.me(435px);
+.me(414px);
+.me(411px);
+.me(384px);
+.me(375px);
+.me(360px);
+.me(320px);
+
+*/
+
+
+.me(@width){
+  @xs : 100px/(375px/@width);
+  @media (max-width:(@width + 2px)){
+    html{
+      font-size:@xs;
+    }
+  }
+}
+
+.me(1920px);
+.me(1440px);
+.me(1366px);
+.me(1280px);
+.me(1024px);
+.me(960px);
+.me(950px);
+.me(900px);
+.me(800px);
+.me(773px);
+.me(768px);
+.me(750px);
+.me(736px);
+.me(732px);
+.me(731px);
+.me(667px);
+.me(640px);
+.me(600px);
+.me(568px);
+.me(533px);
+.me(435px);
+.me(414px);
+.me(411px);
+.me(384px);
+.me(375px);
+.me(360px);
+.me(320px);
+
+
+
+
+.common-center-page-wrap{ //分页外层包裹
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.common-center-page-nav{
+    display: inline-block;
+}
+.wrap-minw{
+    min-width: @minw !important;
+}
+.only-inline-form-item .ivu-form-item-content{
+   display: inline-block;
+}
+.no-border-ivu-table.ivu-table-wrapper {
+    border: none;
+}
+.no-border-ivu-table .ivu-table:after {
+    background-color: #FFFFFF;
+}
+.no-border-ivu-table .ivu-table:before{
+    background-color: #e3e8ee;
+}
+/*
+ * 去除复合型输入框的背景色
+ */
+.no-background-input-slot {
+  & .ivu-input-group-append ,& .ivu-input-group-prepend {
+  background-color: #fff !important;
+  color: @gray-three;
+}
+}
+
+
+/*
+ * 分页标签包裹
+ */
+.common-manage-pagelist-wrap{
+    padding: 20px 20px;
+}
+/*
+ * 文本超出范围隐藏
+ */
+.overfolw-ellipsis{
+    overflow: hidden;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+}
+/*
+ * 无label的form-item
+ */
+.only-no-label-item .ivu-form-item-content{
+    margin-left: 0 !important;
+}
+/*
+ * 对话框底部的上边框去掉
+ */
+.only-no-footer-line-dailog .ivu-modal-footer{
+    border-top: none;
+}
+/*
+ * 去除表格内边距
+ */
+.only-no-padding-table .ivu-table-cell{
+    padding: 0 !important;
+    text-align: center !important;
+}
+.only-no-padding-table th{
+    text-align: center !important;
+}
+/*
+ * 去除气泡提示框最小宽度限制
+ */
+.poptip-min-width-clear .ivu-poptip-popper{
+    min-width: 0px !important;
+}
+/*
+ * 组件切换动画
+ */
+.slide-fade-enter-active {
+    animation: bounce-in .5s;
+    transition: all .3s ease;
+}
+.slide-fade-leave-active {
+    transition: all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter {
+    transform: translateX(10%);
+    opacity: 0;
+}
+.slide-fade-leave-to{
+    transform: translateX(-10%);
+    opacity: 0;
+}
+.slide-fade-move {
+    transition: transform 1s;
+}
+
+/**
+label的margin强行设为50px
+ */
+.mr50-label-item  .ivu-form-item-content {
+  margin-left: 50px !important;
+}
+
+.mr60-label-item  .ivu-form-item-content {
+  margin-left: 60px !important;
+}
+
+.mr70-label-item  .ivu-form-item-content {
+  margin-left: 70px !important;
+}
+
+.mr90-label-item  .ivu-form-item-content {
+  margin-left: 90px !important;
+}
+
+.mr160-label-item  .ivu-form-item-content {
+  margin-left: 160px !important;
+}
+
+.mr200-label-item  .ivu-form-item-content {
+  margin-left: 200px !important;
+}
+/**
+lebel的宽度自适应
+ */
+.label-fit-content .ivu-form-item-label {
+  width: auto !important;
+  margin-left:10px!important;
+}
+
+
+//#app {
+//  min-width: 1200px !important;
+//}
+
+
+.ivu-tabs-nav-scroll{
+  //position:relative;
+  .ivu-tabs-tab{
+    font-size:16px;
+    color:#565656;
+    padding:8px 30px;
+    &:hover{
+      color:@color;
+    }
+  }
+  .ivu-tabs-tab-active{
+    color:@color;
+  }
+  .ivu-tabs-ink-bar{
+    background-color: @color;
+  }
+  .ivu-tabs-nav{
+    margin-left:50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+
+.ivu-collapse-content{
+  background-color: #1d1d1d;
+}
+.ivu-collapse > .ivu-collapse-item > .ivu-collapse-header{
+  color:#b8b8b8;
+}
+
+//iview 走马灯
+.solution_carousel > .ivu-carousel-dots{
+  margin-bottom:0.2rem;
+}
+.solution_carousel>.ivu-carousel-dots > li.ivu-carousel-active > button{
+  background-color:@color;
+}
+.solution_carousel > .ivu-carousel-dots li button{
+  width:0.57rem;
+}
+.solution_carousel>.ivu-carousel-arrow.left{
+  left:-0.16rem;
+}
+.solution_carousel>.ivu-carousel-arrow.right{
+  right:-0.16rem;
+}
+
+//swiper
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #FB5F00;
+}
+.swiper-pagination-progress .swiper-pagination-progressbar {
+  background: #FB5F00;
+}
+
